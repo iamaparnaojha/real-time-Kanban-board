@@ -19,7 +19,7 @@ function KanbanBoard() {
 
   // Initialize Socket.IO connection
   useEffect(() => {
-    const newSocket = io('http://localhost:5000', {
+  const newSocket = io(import.meta.env.VITE_BACKEND_URL, {
       reconnectionDelay: 1000,
       reconnection: true,
       reconnectionAttempts: 10,
